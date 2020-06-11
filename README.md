@@ -25,7 +25,7 @@ La mise à disposition de la version bêta marque l’ouverture d’une phase de
 
 
 ### Dossier sql
-- [sql_README.md](./script/sql_README.md)
+- [sql_README.md](./sql/sql_README.md)
 - Normalisation_adresses_coax.sql
 - Normalisation_adresses_cuivre.sql
 - Normalisation_adresses_fibre.sql
@@ -40,7 +40,7 @@ La mise à disposition de la version bêta marque l’ouverture d’une phase de
 
 
 ### Base de données
-- fichier ""BDD_reduite_MCI.tar" de la base de données réduite à télécharger sur la [page datagouv de MaConnexionInternet](https://www.data.gouv.fr/fr/datasets/ma-connexion-internet-beta/#resource-ccaf9b17-22be-4009-8269-9301c6f17cbf)
+- fichier "BDD_reduite_MCI.tar" de la base de données réduite à télécharger sur la [page datagouv de MaConnexionInternet](https://www.data.gouv.fr/fr/datasets/ma-connexion-internet-beta/#resource-ccaf9b17-22be-4009-8269-9301c6f17cbf)
 
 ## Composition de la base de données
 ### Schémas de la base de données
