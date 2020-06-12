@@ -56,7 +56,7 @@ La mise à disposition de la version bêta marque l’ouverture d’une phase de
 - Eligibilite
 
 ## Jeu de données
-Les données publiées sont les données d’entrée de Ma connexion internet pour une liste de communes dont les codes INSEE commencent soit par les 3 chiffres "452" (communes situées dans le département du Loiret) soit par les 4 chiffres "4700" (communes situées dans le département du Lot-et-Garonne). Ce jeu de données contient 122 364 immeubles et 652 224 locaux se répartissant dans les zones suivantes :  
+Les données publiées sont les données d’entrée de Ma connexion internet pour une liste de communes dont les codes INSEE commencent soit par les 3 chiffres "452" (communes situées dans le département du Loiret) soit par les 4 chiffres "4700" (communes situées dans le département du Lot-et-Garonne). Ce jeu de données contient 122 364 immeubles et 470 755 locaux se répartissant dans les zones suivantes :  
 -	1 commune de ZTD
 -	11 communes en ZMD Privée
 -	92 communes en ZMD publique
