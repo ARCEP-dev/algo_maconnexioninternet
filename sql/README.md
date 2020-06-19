@@ -172,8 +172,10 @@ Recalcul de la vue materialisée *adresse.commune* qui permet le calcul des stat
 Peuplement des tables *adresse.epci* & *adresse.iris* des stats à l'EPCI et à l'IRIS.
 
 ##### Lancement
+Placez vous dans le dossier contenant le fichier "data_workflow_db_addr_evol.sql" sur votre serveur et lancez la commande :
+
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < data_workflow_db_addr_evol_2_1_1.sql >
+nohup psql -d pgdatabase -U pguser < ./data_workflow_db_addr_evol.sql >
 ```
 
 ---
@@ -202,8 +204,9 @@ Découpage des polygones à la commune.
 Ajout de toutes les entités *adresse.immeuble* contenu dans les zones de couverture qui ne sont pas saturées.
 
 ##### Lancement
+Placez vous dans le dossier contenant le fichier "eligibilite_cell_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < eligibilite_cell_actuel.sql >
+nohup psql -d pgdatabase -U pguser < ./eligibilite_cell_actuel.sql >
 ```
 
 <br/>
@@ -225,8 +228,9 @@ Ajout des entités qui sont géocodées.
 Ajout des entités *adresse.adresse* non présentes précédemment et qui sont situées à moins de 50 mètres d'un ampli n'ayant pas d'adresse rattachée.
 
 ##### Lancement
+Placez vous dans le dossier contenant le fichier "eligibilite_coax_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < eligibilite_coax_actuel.sql >
+nohup psql -d pgdatabase -U pguser < ./eligibilite_coax_actuel.sql >
 ```
 
 <br/>
@@ -264,8 +268,9 @@ Ajout dans la table *eligibilite.actuel* des entités précédentes en calculant
 Les immeubles sont soit en VDSL soit par défaut en ADSL.
 
 ##### Lancement
+Placez vous dans le dossier contenant le fichier "eligibilite_cu_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < eligibilite_cu_actuel.sql >
+nohup psql -d pgdatabase -U pguser < ./eligibilite_cu_actuel.sql >
 ```
 
 <br/>
@@ -277,8 +282,9 @@ Suppression de toutes les entités de la table *eligibilite.actuel* ayant pour t
 Ajout de toutes les entités *reseau_fo.imb* dont le statut est Raccordable sur demande ou Déployé et dont le PM est à l'état déployé et dont la date de mise en service commerciale est au plus celle du jour.
 
 ##### Lancement
+Placez vous dans le dossier contenant le fichier "eligibilite_fo_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < eligibilite_fo_actuel.sql >
+nohup psql -d pgdatabase -U pguser < ./eligibilite_fo_actuel.sql >
 ```
 
 <br/>
@@ -290,8 +296,9 @@ Suppression de toutes les entités de la table *eligibilite.actuel* ayant pour t
 Ajout de toutes les entités *adresse.immeuble* contenu dans les zones de couverture.
 
 ##### Lancement
+Placez vous dans le dossier contenant le fichier "eligibilite_hz_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < eligibilite_hz_actuel.sql >
+nohup psql -d pgdatabase -U pguser < ./eligibilite_hz_actuel.sql >
 ```
 
 <br/>
@@ -311,7 +318,8 @@ Découpage des polygones à la commune.
 Ajout de toutes les entités *adresse.immeuble* contenu dans les zones de couverture.
 
 ##### Lancement
+Placez vous dans le dossier contenant le fichier "eligibilite_sat_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < eligibilite_sat_actuel.sql >
+nohup psql -d pgdatabase -U pguser < ./eligibilite_sat_actuel.sql >
 ```
 ---

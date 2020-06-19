@@ -14,46 +14,8 @@ La mise à disposition de la version bêta marque l’ouverture d’une phase de
 
 
 
-## Composition du dépôt
-### Dossier script
-- [script_README.md](./script/script_README.md)
-- geocoding_processus_coax.sh
-- geocoding_processus_cu.sh
-- geocoding_processus_fo.sh
-- geocoding_pgsql_max_length.py
-- geocoding_processus_{coax,cu,fo}.sh
-
-
-### Dossier sql
-- [sql_README.md](./sql/sql_README.md)
-- Normalisation_adresses_coax.sql
-- Normalisation_adresses_cuivre.sql
-- Normalisation_adresses_fibre.sql
-- reverse_geocoding_fo.sql
-- eligibilite_cell_actuel.sql
-- eligibilite_coax_actuel
-- eligibilite_cu_actuel
-- eligibilite_fo_actuel.sql
-- eligibilite_hz_actuel.sql
--  eligibilite_sat_actuel.sql
-- data_workflow_db_addr_evol
-
-
 ### Base de données
 - fichier "BDD_reduite_MCI.tar" de la base de données réduite à télécharger sur la [page datagouv de MaConnexionInternet](https://www.data.gouv.fr/fr/datasets/ma-connexion-internet-beta/#resource-ccaf9b17-22be-4009-8269-9301c6f17cbf)
-
-## Composition de la base de données
-### Schémas de la base de données
-- Admin
-- Reference
-- Reseau_cu
-- Reseau_fo
-- Reseau_coax
-- Reseau_hz
-- Reseau_cell
-- Reseau_sat
-- Adresse
-- Eligibilite
 
 ## Jeu de données
 Les données publiées sont les données d’entrée de Ma connexion internet pour une liste de communes dont les codes INSEE commencent soit par les 3 chiffres "452" (communes situées dans le département du Loiret) soit par les 4 chiffres "4700" (communes situées dans le département du Lot-et-Garonne). Ce jeu de données contient 122 364 immeubles et 470 755 locaux se répartissant dans les zones suivantes :  
@@ -75,12 +37,12 @@ Prérequis : Avoir installé postgreSQL.
 
 Créer une base de donnée avec la commande
 ```sql
- CREATE DATABASE MCI_beta_reduite;
+ CREATE DATABASE mci_beta_reduite;
 ```
 Pour restaurer la base placez vous dans le dossier contenant l'archive "BDD_reduite_MCI.tar" sur votre serveur et lancez la commande :
 
 ```pgsql
-pg_restore -U pghost -d MCI_beta_reduite ./export_BDD_publi.tar
+pg_restore -U pghost -d mci_beta_reduite ./bdd-reduite-mci.tar
 ```
 - pghost : adresse IP du serveur de base de données
 
