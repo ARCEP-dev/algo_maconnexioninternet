@@ -23,7 +23,7 @@
 **[Éligibilité actuelle de la techno sat - (eligibilite_sat_actuel.sql)](#eligibilite_sat_actuelsql)**
 
 
-### Normalisation des adresses (lors du géocodage) et géocodage inverse
+### Normalisation des adresses (lors du géocodage)
 
 Les différents scripts de normalisation des adresses ont un comportement assez semblable.
 
@@ -47,6 +47,7 @@ Normalisation des adresses du schéma cu. Affecte la table reseau_cu.ld et sa co
 
 Normalisation des adresses du schéma fo. Affecte la table reseau_fo.imb et ses colonnes *type_voie* & *nom_voie*.
 
+### Géocodage inverse
 
 #### ./reverse_geocoding_fo.sql
 
@@ -175,7 +176,7 @@ Peuplement des tables *adresse.epci* & *adresse.iris* des stats à l'EPCI et à 
 Placez vous dans le dossier contenant le fichier "data_workflow_db_addr_evol.sql" sur votre serveur et lancez la commande :
 
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < ./data_workflow_db_addr_evol.sql >
+psql -d pgdatabase -U pguser < ./data_workflow_db_addr_evol.sql
 ```
 
 ---
@@ -206,7 +207,7 @@ Ajout de toutes les entités *adresse.immeuble* contenu dans les zones de couver
 ##### Lancement
 Placez vous dans le dossier contenant le fichier "eligibilite_cell_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < ./eligibilite_cell_actuel.sql >
+psql -d pgdatabase -U pguser < ./eligibilite_cell_actuel.sql
 ```
 
 <br/>
@@ -230,7 +231,7 @@ Ajout des entités *adresse.adresse* non présentes précédemment et qui sont s
 ##### Lancement
 Placez vous dans le dossier contenant le fichier "eligibilite_coax_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < ./eligibilite_coax_actuel.sql >
+psql -d pgdatabase -U pguser < ./eligibilite_coax_actuel.sql
 ```
 
 <br/>
@@ -270,7 +271,7 @@ Les immeubles sont soit en VDSL soit par défaut en ADSL.
 ##### Lancement
 Placez vous dans le dossier contenant le fichier "eligibilite_cu_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < ./eligibilite_cu_actuel.sql >
+psql -d pgdatabase -U pguser < ./eligibilite_cu_actuel.sql
 ```
 
 <br/>
@@ -284,7 +285,7 @@ Ajout de toutes les entités *reseau_fo.imb* dont le statut est Raccordable sur 
 ##### Lancement
 Placez vous dans le dossier contenant le fichier "eligibilite_fo_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < ./eligibilite_fo_actuel.sql >
+psql -d pgdatabase -U pguser < ./eligibilite_fo_actuel.sql
 ```
 
 <br/>
@@ -298,7 +299,7 @@ Ajout de toutes les entités *adresse.immeuble* contenu dans les zones de couver
 ##### Lancement
 Placez vous dans le dossier contenant le fichier "eligibilite_hz_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < ./eligibilite_hz_actuel.sql >
+psql -d pgdatabase -U pguser < ./eligibilite_hz_actuel.sql
 ```
 
 <br/>
@@ -320,6 +321,6 @@ Ajout de toutes les entités *adresse.immeuble* contenu dans les zones de couver
 ##### Lancement
 Placez vous dans le dossier contenant le fichier "eligibilite_sat_actuel.sql" sur votre serveur et lancez la commande :
 ```plpgsql
-nohup psql -d pgdatabase -U pguser < ./eligibilite_sat_actuel.sql >
+psql -d pgdatabase -U pguser < ./eligibilite_sat_actuel.sql
 ```
 ---

@@ -3,7 +3,6 @@
 BEGIN;
 
 ---------------- REINITIALISATION ----------------
-/*modifications ajoutées par rapport au script initial*/
 ---Mis à null des logements de la table FPB---
 UPDATE adresse.fpb
 SET code_ban=null

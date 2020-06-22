@@ -17,6 +17,8 @@ La mise à disposition de la version bêta marque l’ouverture d’une phase de
 ### Base de données
 - fichier "BDD_reduite_MCI.tar" de la base de données réduite à télécharger sur la [page datagouv de MaConnexionInternet](https://www.data.gouv.fr/fr/datasets/ma-connexion-internet-beta/#resource-ccaf9b17-22be-4009-8269-9301c6f17cbf)
 
+La représentation du modèle de données de la base se trouve dans le dossier "Diagrammes".
+
 ## Jeu de données
 Les données publiées sont les données d’entrée de Ma connexion internet pour une liste de communes dont les codes INSEE commencent soit par les 3 chiffres "452" (communes situées dans le département du Loiret) soit par les 4 chiffres "4700" (communes situées dans le département du Lot-et-Garonne). Ce jeu de données contient 122 364 immeubles et 470 755 locaux se répartissant dans les zones suivantes :  
 -	1 commune de ZTD
@@ -31,14 +33,13 @@ Les données publiées sont les données d’entrée de Ma connexion internet po
 - les types de présence des opérateurs commerciaux sur les NRA (oc_nra.type_presence) ont été modifiés avec des données aléatoires;
 - les nombres de logements des immeubles du fichier IPE ont été modifiés en associant aléatoirement des nombres entre 1 et 10 (cette modification est due à des questions de droit de propriété intellectuelle).
 
+
 ## Restauration de la Base de donnée réduite publiée
 
-Prérequis : Avoir installé postgreSQL.
+Prérequis : Avoir installé postgreSQL. La version de postgres utilisée est la version n°10. L'encodage est UTF8.
 
-Créer une base de donnée avec la commande
-```sql
- CREATE DATABASE mci_beta_reduite;
-```
+Créer une base de donnée à partir du script "create_database.sh" (son lancement est expliqué dans le README du dossier script).
+
 Pour restaurer la base placez vous dans le dossier contenant l'archive "BDD_reduite_MCI.tar" sur votre serveur et lancez la commande :
 
 ```pgsql

@@ -1,6 +1,8 @@
 
 ## Description des scripts de géocodage
 
+**[Création de base de données vide - (create_database.sh)](#create_databasesh)**
+
 **[Géocodage des données en base avec distance limite - (geocoding_pgsql_max_length.py)](#geocoding_pgsql_max_lengthpy)**
 
 **[Processus de géocodage *global* - (geocoding_processus_{coax,cu,fo}.sh)](#geocoding_processus_*sh)**
@@ -11,6 +13,48 @@
 
 **[Processus de géocodage fo - (geocoding_processus_fo.sh)](#geocoding_processus_fosh)**
 
+## ./create_database.sh
+
+Script permettant de créer une base de données.
+
+### Lancement
+```sh
+./create_database.sh user dbname template
+```
+
+### Paramètres
+- **user** : utilisateur utilisé pour la création de la base
+- **dbname** : nom de la base à créer
+- **template*** : nom de la base existante servant de modèle
+
+\* : facultatif.
+
+### Retours
+
+**Si succès de création de la base de données**
+```
+Success
+```
+
+### Retours sur erreur
+
+**Requête SQL en échec**
+```
+Fail !
+```
+
+**Instance postgres non prête**
+```
+Postgres refuse les connexions !
+```
+
+**Nombre de paramètres insuffisant**
+```
+Les paramètres utilisateur de connexion et nom de la base de données sont attendus. Il est possible de passer en troisième paramètre la base utilisée comme modèle.
+ex : $ ./create_database.sh user pgdatabase (template)
+```
+
+---
 
 #### ./geocoding_pgsql_max_length.py
 
